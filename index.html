@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushi Restaurant</title>
+    <!--Google Font-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alumni+Sans">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top opacity-hover-off" id="myNavbar">
+        <div class="container-fluid">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#" style="font-size: 2rem;">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#menu" style="font-size: 2rem;">MENU</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about" style="font-size: 2rem;">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact" style="font-size: 2rem;">CONTACT</a>
+              </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header with image -->
+    <header class="bg-img d-flex flex-column justify-content-between" id="home">
+        <div></div>
+        <div class="d-flex flex-column text-center">
+            <span class="display-1">Nobori Sushi</span>
+            <p><a href="#menu" class="btn btn-lg btn-dark hover-btn fs-2">Let me see the menu</a></p>
+        </div>
+        <div class="d-flex justify-content-start">
+            <span class="bg-dark text-white p-3 h2">Open from 10am to 11pm - Call 555-555-5555</span>
+        </div>
+    </header>
+  
+    <!-- Menu Container -->
+
+    <div class="bg-img2 container-fluid text-white py-5 display-4" id="menu">
+    <div class="container">
+    
+      <h1 class="text-center display-2 mb-5">THE MENU</h1>
+      
+      <div class="text-center border border-dark">
+        <div class="d-flex ">
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Lunch');" class="col-4 tablink p-3 hover-red" id="mainLink">Lunch</a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Dinner');" class="col-4 tablink p-3 hover-red">Dinner</a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Catering');" class="col-4 tablink p-3 hover-red">Catering</a>
+        </div>
+      </div>
+  
+      <!-- Lunch Menu -->
+      <div id="Lunch" class="container-fluid menu p-4 bg-white">
+        <!-- Roll Combo -->
+        <div class="d-flex justify-content-between align-items-baseline">
+          <h1 class="mb-0 display-3"><b>Roll Combo</b></h1>
+          <span class="badge bg-dark text-white">$12.50</span>
+        </div>
+        <p class="text-muted">Choose 2 rolls.</p>
+        <hr class="text-muted">
+      
+        <!-- Sushi Combo -->
+        <div class="d-flex justify-content-between align-items-baseline">
+          <h1 class="mb-0 display-3"><b>Sushi Combo</b></h1>
+          <span class="badge bg-dark text-white">$15.50</span>
+        </div>
+        <p class="text-muted">Sushi Combo</p>
+        <hr class="text-muted">
+      
+        <!-- Teriyaki Combo -->
+        <div class="d-flex justify-content-between align-items-baseline">
+          <h1 class="mb-0 display-3"><b>Teriyaki Combo</b></h1>
+          <span class="badge bg-dark text-white ">$17.00</span>
+        </div>
+        <p class="text-muted">Teriyaki Combo</p>
+        <hr class="text-muted">
+      
+        <!-- Noodle Combo -->
+        <div class="d-flex justify-content-between align-items-baseline">
+          <h1 class="mb-0 display-3"><b>Noodle Combo</b></h1>
+          <span class="badge bg-dark text-white">$16.50</span>
+        </div>
+        <p class="text-muted">Choose 1 roll and 1 noodle dish.</p>
+        <hr class="text-muted">
+      
+        <!-- Tempura Combo -->
+        <div class="d-flex justify-content-between align-items-baseline">
+          <h1 class="mb-0 display-3"><b>Tempura Combo</b> <span class="badge bg-red small-tag">Hot!</span></h1>
+          <span class="badge bg-dark text-white">$20.00</span>
+        </div>
+        <p class="text-muted">Choose 1 roll and 1 tempura dish. Served with rice.</p>
+        <hr class="text-muted">
+      
+        <!-- Cutlet Combo -->
+        <div class="d-flex justify-content-between align-items-baseline">
+          <h1 class="mb-0 display-3"><b>Cutlet Combo</b> <span class="badge bg-grey small-tag">New</span></h1>
+          <span class="badge bg-dark text-white">$21.50</span>
+        </div>
+        <p class="text-muted">Choose 1 roll and 1 cutlet dish. Served with rice.</p>
+      </div>
+  
+      <!-- Dinner Menu -->
+      <div id="Dinner" class="container-fluid menu p-4 bg-white">
+        <!-- Nigiri (with rice) or Sashimi (no rice) -->
+        <div class="d-flex justify-content-between align-items-baseline">
+          <h1 class="mb-0 display-3"><b>Nigiri (with rice) or Sashimi (no rice) </b><span class="badge bg-grey small-tag">Popular</span></h1>
+          <span class="badge bg-dark text-white">$13.50</span>
+        </div>
+        <p class="text-muted">1 piece per order. Brown Rice add $.50</p>
+        <hr class="text-muted">
+      
+        <!-- Maki - Rolls -->
+        <div class="d-flex justify-content-between align-items-baseline">
+          <h1 class="mb-0 display-3"><b>Maki - Rolls</b></h1>
+          <span class="badge bg-dark text-white">$14.50</span>
+        </div>
+        <p class="text-muted">One roll = 6 pieces. Inside/out roll (rice on the outside) add $2. Fish eggs add $4. Cream Cheese add $1. Soy Paper add $2. Avocado add $1; Brown Rice add $1 for small rolls; $2 for large rolls; Eel Sauce add $1; Spicy May add $1</p>
+        <hr class="text-muted">
+      
+        <!-- Signature Rolls -->
+        <div class="d-flex justify-content-between align-items-baseline">
+          <h1 class="mb-0 display-3"><b>Signature Rolls</b></h1>
+          <span class="badge bg-dark text-white ">$11.00</span>
+        </div>
+        <p class="text-muted">Wrapped in sushi rice. Brown Rice add $2 Full Rolls / $1 Half Rolls. Eel Sauce add $.50; Spicy Mayo add $.50</p>
+        <hr class="text-muted">
+      
+        <!-- Sushi -->
+        <div class="d-flex justify-content-between align-items-baseline">
+          <h1 class="mb-0 display-3"><b>Sushi</b></h1>
+          <span class="badge bg-dark text-white">$25.50</span>
+        </div>
+        <p class="text-muted">Served with miso soup or salad (except Nobori Sushi Special). No substitutions, please. Brown Rice add $2.</p>
+      </div>
+  
+      <!-- Catering Menu -->
+      <div id="Catering" class="container-fluid menu p-4 bg-white">
+        <!-- Rolls 12" Tray -->
+        <div class="d-flex justify-content-between align-items-baseline">
+          <h1 class="mb-0 display-3"><b>Rolls 12" Tray </b><span class="badge bg-grey small-tag">Seasonal</span></h1>
+          <span class="badge bg-dark text-white">$5.50</span>
+        </div>
+        <p class="text-muted">Includes 7 rolls. </p>
+        <hr class="text-muted">
+      
+        <!-- Medium Rolls 16" Tray -->
+        <div class="d-flex justify-content-between align-items-baseline">
+          <h1 class="mb-0 display-3"><b>Medium Rolls 16" Tray</b></h1>
+          <span class="badge bg-dark text-white">$8.50</span>
+        </div>
+        <p class="text-muted">Include 14 rolls</p>
+        <hr class="text-muted">
+      
+        <!-- Deluxe Rolls 18" Tray -->
+        <div class="d-flex justify-content-between align-items-baseline">
+          <h1 class="mb-0 display-3"><b>Deluxe Rolls 18" Tray</b></h1>
+          <span class="badge bg-dark text-white ">$9.59</span>
+        </div>
+        <p class="text-muted">Include 21 rolls.</p>
+        <hr class="text-muted">
+      
+        <!-- Small Sushi Combo 12" Tray -->
+        <div class="d-flex justify-content-between align-items-baseline">
+          <h1 class="mb-0 display-3"><b>Small Sushi Combo 12" Tray</b></h1>
+          <span class="badge bg-dark text-white">$10.50</span>
+        </div>
+        <p class="text-muted">Includes 4 rolls, 8 pieces (4 x 2 kinds) sushi.</p>
+      </div>
+  
+    </div>
+    </div>
+  
+    <!-- About Container -->
+    <div class="container-fluid py-5 text-white" style="background-color: rgb(19, 42, 56);" id="about">
+        <div class="container">
+            <h1 class="text-center display-2 mb-3">ABOUT</h1>
+            <h1 class="display-4"><b>Opening Hours</b></h1>
+            <div class="row fs-2">
+                <div class="col-6">
+                    <p>Mon & Tue CLOSED</p>
+                    <p>Wednesday 10.00 - 24.00</p>
+                    <p>Thursday 10:00 - 24:00</p>
+                </div>
+                <div class="col-6">
+                    <p>Friday 10:00 - 12:00</p>
+                    <p>Saturday 10:00 - 23:00</p>
+                    <p>Sunday Closed</p>
+                </div>
+            </div>
+  
+            <h1 class="display-4"><b>History</b></h1>
+            <p class="fs-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="row">
+        <div class="col-lg-9 col-md-8 col-sm-12">
+            <p class="fs-2"><strong>The Chef?</strong> Mr. Lee himself. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-12 text-end">
+            <img src="/assets/chef.jpg" style="width:200px" class="rounded-circle" alt="Chef">
+        </div>
+        <div><p class="fs-2">We are proud of our interiors.</p></div>
+
+        <div id="myCarousel" class="carousel slide my-3 carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+            
+            <div class="carousel-inner" style="min-height: 100vh;">
+                <div class="carousel-item active">
+                    <img src="/assets/restaurant1.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Restaurant 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="/assets/restaurant2.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Restaurant 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="/assets/restaurant3.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Restaurant 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+  
+    <!-- Image of location/map -->
+    <!--<img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;" id="myMap">-->
+  
+    <!-- Contact -->
+    <div class="container-fluid bg-secondary text-white py-5 fs-2" id="contact">
+        <div class="container">
+            <h1 class="text-center display-2 mb-5">CONTACT</h1>
+            <p >Find us at some address at some place or call us at 05050515-122330</p>
+            <p>
+                <span class="badge bg-dark">FYI!</span>
+                We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggest criteria of them all, both look and taste.
+            </p>
+            <p><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
+            <form action="/action_page.php" target="_blank">
+                <div class="mb-3">
+                    <input type="text" class="form-control extra-large" placeholder="Name" required name="Name">
+                </div>
+                <div class="mb-3">
+                    <input type="number" class="form-control extra-large" placeholder="How many people" required name="People">
+                </div>
+                <div class="mb-3">
+                    <input type="datetime-local" class="form-control extra-large" placeholder="Date and time" required name="date" id="myDateTimeInput">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control extra-large" placeholder="Message \ Special requirements" required name="Message">
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-light btn-lg btn-block fs-2">SEND MESSAGE</button>
+                </div>
+            </form>
+        </div>
+    </div>
+  
+    <!-- Footer -->
+    <footer class="text-center bg-dark text-white py-4">
+        <p class="fs-3 mb-0 ">
+        Original Design Inspired by
+        <a href="https://www.w3schools.com/" title="W3 Schools" target="_blank" class="text-success hover-text-green">
+            W3 Schools
+        </a>
+    </p>
+    <p class="fs-3">Built with Bootstrap and CSS by <a href="https://www.twitch.tv/mayanwolfe" title="Mayanwolfe" target="_blank" class="text-success hover-text-green">
+      Mayanwolfe
+    </a></p>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
